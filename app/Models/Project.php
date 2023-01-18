@@ -6,7 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Project extends Model
 {
     use HasFactory;
 
@@ -15,10 +15,10 @@ class Post extends Model
 
         $original_slug = $slug;
         $c = 1;
-        $post_exists = Post::where('slug',$slug)->first();
-        while($post_exists){
+        $project_exists = Project::where('slug',$slug)->first();
+        while($project_exists){
             $slug = $original_slug . '-' . $c;
-            $post_exists = Post::where('slug',$slug)->first();
+            $project_exists = Project::where('slug',$slug)->first();
             $c++;
         }
         return $slug;

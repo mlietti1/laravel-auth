@@ -2,7 +2,7 @@
 
 @section('title')
 
-| admin
+| Admin
 
 @endsection
 

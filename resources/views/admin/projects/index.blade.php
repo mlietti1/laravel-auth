@@ -9,7 +9,7 @@
 @section('content')
 <div class="container py-4">
 
-    <h1>Elenco dei Post</h1>
-    @dump($posts)
+    <h1>Elenco dei Progetti</h1>
+
 </div>
 @endsection
