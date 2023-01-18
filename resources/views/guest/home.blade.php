@@ -2,6 +2,6 @@
 
 @section('content')
 
-HOME
+<h1>Pagina Pubblica</h1>
 
 @endsection

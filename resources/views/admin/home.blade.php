@@ -1,5 +1,11 @@
 @extends('layouts.app')
 
+@section('title')
+
+| admin
+
+@endsection
+
 @section('content')
 <div class="container py-4">
     <h2>Questa è la dashboard di {{ Auth::user()->name }}</h2>
