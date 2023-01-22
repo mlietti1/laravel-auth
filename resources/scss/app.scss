@@ -8,6 +8,12 @@ main{
     overflow: auto;
 }
 
+table{
+    tr{
+        vertical-align: middle;
+    }
+}
+
 .aside-nav ul{
     list-style: none;
     li{

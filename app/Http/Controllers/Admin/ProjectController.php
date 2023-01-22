@@ -3,10 +3,10 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+
 use App\Http\Requests\StoreProjectRequest;
 use App\Http\Requests\UpdateProjectRequest;
 use App\Models\Project;
-use SebastianBergmann\CodeCoverage\Report\Xml\Project as XmlProject;
 
 class ProjectController extends Controller
 {
@@ -17,8 +17,16 @@ class ProjectController extends Controller
      */
     public function index()
     {
-        $projects = Project::all();
-        return view('admin.projects.index', compact('projects'));
+        $projects = Project::orderBy('id', 'desc')->paginate(8);
+        $direction = 'desc';
+        return view('admin.projects.index', compact('projects', 'direction'));
+    }
+
+    public function orderby($column, $direction){
+        $direction = $direction === 'desc' ? 'asc' : 'desc';
+        $projects = Project::orderBy($column, $direction)->paginate(8);
+        return view('admin.projects.index', compact('direction', 'projects'));
+
     }
 
     /**
