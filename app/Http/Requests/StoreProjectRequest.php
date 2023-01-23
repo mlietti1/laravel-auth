@@ -13,7 +13,7 @@ class StoreProjectRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,12 @@ class StoreProjectRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:255|min:3',
+            'client_name' => 'required',
+            'summary' => 'required|min:10',
+            'cover_image' => 'nullable|image|max:32000',
         ];
     }
+
+    // qui posso fare function messages con return di un array con per es 'name.required' => 'mio messaggio', 'name.min' => 'name should be longer than 3...'
 }

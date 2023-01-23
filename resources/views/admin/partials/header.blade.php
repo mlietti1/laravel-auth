@@ -15,7 +15,7 @@
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{route('home') }}"> <i class="fa-solid fa-globe"></i> Vai al sito</a>
+                    <a class="nav-link" href="{{route('home') }}"> <i class="fa-solid fa-globe"></i> Go to website</a>
                 </li>
             </ul>
 
@@ -33,7 +33,7 @@
                 @endif
                 @else
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link protetto</a>
+                    <a class="nav-link" href="#">Link protected</a>
                 </li>
                 <li class="nav-item">
 

@@ -20,6 +20,14 @@ table{
         a{
             color: white;
             text-decoration: none;
+            &:hover{
+                text-decoration: underline;
+            }
         }
     }
+}
+
+.ck-editor__editable[role="textbox"] {
+    /* editing area */
+    height: 300px;
 }
