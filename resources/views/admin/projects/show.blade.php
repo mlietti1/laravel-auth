@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container">
+<div class="container py-3">
 
     @if (session('message'))
          <div class="alert alert-success" role="alert">
