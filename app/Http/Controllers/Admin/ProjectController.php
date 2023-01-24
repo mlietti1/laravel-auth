@@ -113,7 +113,7 @@ class ProjectController extends Controller
                 Storage::disk('public')->delete($project->cover_image);
             }
             $project_data['cover_image_original_name'] = $request->file('cover_image')->getClientOriginalName();
-            $project_data['cover_image'] = Storage::put('uploads', $project_data['image']);
+            $project_data['cover_image'] = Storage::put('uploads', $project_data['cover_image']);
         }
 
         $project->update($project_data);
