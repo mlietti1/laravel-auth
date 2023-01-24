@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    | {{$project->title}}
+    | {{$project->name}}
 @endsection
 
 @section('content')
@@ -16,18 +16,16 @@
 
 
 
-    <h1 class="my-5"> {{$project->title}} <a class="btn btn-warning " href="{{route('admin.projects.edit', $project)}}">EDIT</a> </h1>
+    <h1 class="my-3"> {{$project->name}} <a class="btn btn-warning " href="{{route('admin.projects.edit', $project)}}">EDIT</a> </h1>
 
+    <div><p><strong>Client:</strong> {{$project->client_name}}</p></div>
 
     @if($project->cover_image)
         <div>
             <img width="500" src="{{asset('storage/' . $project->cover_image)}}" alt="{{$project->cover_image_original_name}}">
-            <div><i>{{$project->cover_image_original_name}}</i></div>
+            <figcaption>{{$project->cover_image_original_name}}</figcaption>
         </div>
     @endif
-
-    <img  src="{{ $project->cover_image}}" alt="{{ $project->name }}">
-
 
 
     <p>
